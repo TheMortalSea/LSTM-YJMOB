@@ -1,0 +1,11 @@
+Metadata-Version: 2.1
+Name: geobleu
+Version: 0.3
+Summary: Implementation of GEO-BLEU and other evaluation metrics for HuMob Challenge 2023
+Home-page: https://github.com/yahoojapan/geobleu
+Author: Toru Shimizu, Yahoo Japan Corporation
+Author-email: toshimiz@yahoo-corp.jp
+License: MIT
+License-File: LICENSE
+Requires-Dist: numpy
+Requires-Dist: scipy
