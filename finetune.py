@@ -100,7 +100,7 @@ def finetune(args):
         scaler = GradScaler()
 
         best_loss = float('inf')
-        city_save_path = os.path.join(args.save_path, f'city_{city_name}_finetune_model.pth')
+        city_save_path = os.path.join(args.save_path, f'city_{city_name}_finetune_model_LSTM.pth')
 
         # Fine-tune for 5 epochs
         for epoch_id in range(args.epochs):
