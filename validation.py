@@ -49,8 +49,8 @@ def Test(args):
         print(f"\n=== Processing City {city_letter} (Test Set) ===")
         
         # Set the storage path for results
-        generated_name = f'city_{city_letter}_test_generated.csv.gz'
-        ground_truth_name = f'city_{city_letter}_reference.csv.gz'
+        generated_name = f'city_{city_letter}_test_generated_LSTM.csv.gz'
+        ground_truth_name = f'city_{city_letter}_reference_LSTM.csv.gz'
         
         # Load the test set using the TestSet class
         dataset_test = TestSet(path_arr[city_idx])
@@ -61,7 +61,7 @@ def Test(args):
         
         # Instantiate the model and load the city-specific fine-tuned parameters
         model = LSTMLocationPredictor(args.layers_num, args.embed_size, args.cityembed_size).to(device)
-        model_path = os.path.join(args.pth_dir, f'city_{city_letter}_finetune_model.pth')
+        model_path = os.path.join(args.pth_dir, f'city_{city_letter}_finetune_model_LSTM.pth')
         try:
             model.load_state_dict(torch.load(model_path, map_location=device))
             print(f"Loaded fine-tuned model for City {city_letter} from {model_path}")

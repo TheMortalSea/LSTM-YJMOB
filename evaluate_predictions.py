@@ -164,8 +164,8 @@ def evaluate_all_cities(save_path, cities):
     # Process each city
     for city in cities:
         # Construct file paths with city_<letter> naming convention
-        reference_file = os.path.join(save_path, f'city_{city}_reference.csv.gz')
-        generated_file = os.path.join(save_path, f'city_{city}_test_generated.csv.gz')
+        reference_file = os.path.join(save_path, f'city_{city}_reference_LSTM.csv.gz')
+        generated_file = os.path.join(save_path, f'city_{city}_test_generated_LSTM.csv.gz')
         
         # Check if both files exist
         if not os.path.exists(reference_file):
